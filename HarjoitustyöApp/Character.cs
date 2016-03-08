@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+* Created: 8.3.2016 
+* Authors: Albert Kuusjärvi
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
