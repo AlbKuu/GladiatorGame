@@ -12,9 +12,9 @@ namespace HarjoitustyöApp
 {
     class Character
     {
-        public int Level;
-        public int HitPoints { get; set; }
-        public int Block;
-        public int Stamina;
+        public int Level=1;
+        public int HitPoints=10;
+        public int Block=1;
+        public int Stamina=100;
     }
 }

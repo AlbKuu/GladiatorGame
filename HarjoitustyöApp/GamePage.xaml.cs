@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+* Created: 8.3.2016 
+* Authors: Albert Kuusjärvi
+*/
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +29,26 @@ namespace HarjoitustyöApp
         public GamePage()
         {
             this.InitializeComponent();
+
+            //Playerin ja Opponentin luominen
+            Player Player = new Player();
+            Opponent Opponent = new Opponent();
+
+            // Playerin tietojen määrittäminen
+            LevelTextBlock.Text = "Level:1";
+            HitPointsBar.Value = Player.HitPoints;
+            HitPointsBar.Maximum = Player.HitPoints;
+            BlockTextBlock.Text = "Block:1";
+            StaminaBar.Value = Player.Stamina;
+            StaminaBar.Maximum = Player.Stamina;
+
+            // Opponentin tietojen määrittäminen
+            OpponentLevelTextBlock.Text = "Level:1";
+            OpponentHitPointsBar.Value = Opponent.HitPoints;
+            OpponentHitPointsBar.Maximum = Opponent.HitPoints;
+            OpponentBlockTextBlock.Text = "Block:1";
+            OpponentStaminaBar.Value = Opponent.Stamina;
+            OpponentStaminaBar.Maximum = Opponent.Stamina;
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
@@ -38,10 +62,12 @@ namespace HarjoitustyöApp
 
         private void CreateCharacterButton_Click(object sender, RoutedEventArgs e)
         {
-            LevelTextBlock.Text = "Level=1";
-            HitPointsBar.Value = 50;
-            BlockTextBlock.Text = "Block=2";
-            StaminaBar.Value = 25;
+            
+        }
+
+        private void PlayerAttackButton_Click(object sender, RoutedEventArgs e)
+        {
+            InfoTextBlock.Text = "Attack!";
         }
     }
 }

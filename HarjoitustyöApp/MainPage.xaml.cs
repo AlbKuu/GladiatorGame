@@ -33,7 +33,7 @@ namespace HarjoitustyöApp
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            // siirtyminen peliruutuun 
+            // Siirtyminen peliruutuun 
             this.Frame.Navigate(typeof(GamePage));
         }
     }
