@@ -8,9 +8,10 @@ namespace HarjoitustyöApp
 {
     class Player : Character
     {
+        Weapon weapon1 = new Weapon();
         public void Attack1()
         {
-
+           
         }
     }
 }

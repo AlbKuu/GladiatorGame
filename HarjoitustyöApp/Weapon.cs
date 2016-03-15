@@ -8,14 +8,11 @@ namespace HarjoitustyöApp
 {
     class Weapon
     {
+        private static Random staticRand = new Random();
         string Type;
-        int Staminacost;
-        int Damage;
-
-        private static readonly Random staticRand = new Random();
-        public static int Attack()
-        {
-            return staticRand.Next(6)+1;
-        }
+        int Staminacost=staticRand.Next(20)+1;
+        public static int x=staticRand.Next(2)+1;
+        public static int y=staticRand.Next(12)+1;
+        int Damage=x*y;
     }
 }

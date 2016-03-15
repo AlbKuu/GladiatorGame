@@ -109,6 +109,9 @@
     <Compile Include="Opponent.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rulespage.xaml.cs">
+      <DependentUpon>Rulespage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +142,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Rulespage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -19,11 +19,12 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="1">
-            <TextBlock Text="Welcome!" HorizontalAlignment="Center"/>
-            <Button x:Name="CreateCharacterButton" Content="Create Character" Click="CreateCharacterButton_Click"/>
-            <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Center" Click="BackButton_Click"/>
+            <TextBlock Text="Welcome!" Margin="5" HorizontalAlignment="Center"/>
+            <Button x:Name="CreateCharacterButton" Margin="5" Content="Create Character" Click="CreateCharacterButton_Click"/>
+            <Button x:Name="BackButton" Margin="5" Content="Back" HorizontalAlignment="Center" Click="BackButton_Click"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock HorizontalAlignment="Center" Text="Player"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
@@ -39,23 +40,39 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Player"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Name="LevelTextBlock"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" Name="HitPointsTextBlock" Text="HP: "/>
-                <ProgressBar Grid.Row="2" Grid.Column="1" Name="HitPointsBar"/>
-                <TextBlock Grid.Row="3" Grid.Column="0" Name="BlockTextBlock"/>
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Stamina: "/>
-                <ProgressBar Grid.Row="4" Grid.Column="1" Name="StaminaBar"/>
-                <Button Grid.Row="5" Grid.Column="0" x:Name="PlayerAttackButton" Content="Attack!" Click="PlayerAttackButton_Click"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Name="LevelTextBlock"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Name="HitPointsTextBlock" Text="HP: "/>
+                <ProgressBar Grid.Row="1" Grid.Column="1" Name="HitPointsBar"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Name="BlockTextBlock"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Stamina: "/>
+                <ProgressBar Grid.Row="3" Grid.Column="1" Name="StaminaBar"/>
+                <Button Grid.Row="4" Grid.Column="0" x:Name="PlayerAttackButton" Content="Attack!" Click="PlayerAttackButton_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2">
-            <TextBlock Text="Opponent"/>
-            <TextBlock Name="OpponentLevelTextBlock"/>
-            <TextBlock Name="OpponentHitPointsTextBlock" Text="{Binding Value, ElementName=OpponentHitPointsBar}"/>
-            <ProgressBar Name="OpponentHitPointsBar"/>
-            <TextBlock Name="OpponentBlockTextBlock"/>
-            <ProgressBar Name="OpponentStaminaBar"/>
+            <TextBlock HorizontalAlignment="Center" Text="Opponent"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock  Grid.Row="0" Grid.Column="0" Name="OpponentLevelTextBlock"/>
+                <TextBlock  Grid.Row="1" Grid.Column="0" Name="OpponentHitPointsTextBlock" Text="HP: "/>
+                <ProgressBar  Grid.Row="1" Grid.Column="1" Name="OpponentHitPointsBar"/>
+                <TextBlock  Grid.Row="2" Grid.Column="0" Name="OpponentBlockTextBlock"/>
+                <TextBlock  Grid.Row="3" Grid.Column="0" Text="Stamina: "/>
+                <ProgressBar  Grid.Row="3" Grid.Column="1" Name="OpponentStaminaBar"/>
+            </Grid>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1">
             <TextBlock Name="InfoTextBlock"/>
